@@ -1,7 +1,5 @@
 # Nutraeva: Smart Nutrition & Fitness Tracker
 
-![App Logo](https://via.placeholder.com/150)
-
 ## Overview
 
 Nutraeva is a comprehensive fitness and nutrition tracking application built with Flutter that helps users monitor their calorie intake, exercise routines, and nutritional goals. The app uses advanced AI and machine learning to provide personalized insights and make food tracking effortless through multiple input methods.
