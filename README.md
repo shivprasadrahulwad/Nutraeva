@@ -53,7 +53,7 @@ flutter run
 - [x] Basic app structure and UI
 - [x] User authentication system
 - [x] Food database integration
-- [ ] Barcode scanning functionality
+- [x] Barcode scanning functionality
 - [ ] Food image recognition
 - [ ] Exercise tracking implementation
 - [ ] AI chatbot integration
