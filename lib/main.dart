@@ -1,52 +1,19 @@
-// import 'package:fitness/screens/image_camera/image_screen.dart';
-// import 'package:flutter/material.dart';
-// import 'package:flutter_dotenv/flutter_dotenv.dart';
-
-// Future<void> main() async {
-//   await dotenv.load(fileName: ".env");
-//   runApp(const MyApp());
-// }
-
-// class MyApp extends StatelessWidget {
-//   const MyApp({super.key});
-
-//   // This widget is the root of your application.
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       title: 'Zoneo',
-//       theme: ThemeData(
-//         primarySwatch: Colors.deepPurple,
-//         visualDensity: VisualDensity.adaptivePlatformDensity,
-//       ),
-//       home: const ImageScreen(),
-//     );
-//   }
-// }
-
-
-
+import 'package:fitness/screens/analytics/analytics_screen.dart';
+import 'package:fitness/screens/analytics/sleep_analytics_screen.dart';
+import 'package:fitness/screens/analytics/water_analystics_screen.dart';
+import 'package:fitness/screens/goal/goal_update_screen.dart';
 import 'package:fitness/screens/home/home_screen.dart';
-import 'package:fitness/screens/image_camera/camera_screen.dart';
-import 'package:fitness/screens/intro_screens/desired_weight_screen.dart';
-import 'package:fitness/screens/intro_screens/gender_selection_screen.dart';
-import 'package:fitness/screens/intro_screens/goal_stopping_screen.dart';
-import 'package:fitness/screens/intro_screens/wait_gain_speed_screen.dart';
+import 'package:fitness/screens/navigation_bar/bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:fitness/screens/image_camera/image_screen.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() async {
-  // Ensure Flutter binding is initialized before doing anything else
   WidgetsFlutterBinding.ensureInitialized();
   
   try {
-    // Load environment variables with proper error handling
     await dotenv.load(fileName: ".env");
     print("dotenv loaded successfully");
     
-    // Debug info about token
     final token = dotenv.env['token'];
     print("API token exists: ${token != null && token.isNotEmpty}");
     if (token != null && token.isNotEmpty) {
@@ -77,7 +44,7 @@ class MyApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         useMaterial3: true,
       ),
-      home: HomeScreen(),
+      home: CurvedBottomNavBar(),
       debugShowCheckedModeBanner: false,
       darkTheme: null,
     );
